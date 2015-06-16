@@ -1,0 +1,10 @@
+<template name="home">
+    {{#if currentUser}}
+        {{> projects}}
+    {{else}}
+        <div class="home well container">
+            <h2>Please login/register to view your projects and ministeps</h2>
+            <h6>Developed by <a href="http://twitter.com/funcoder" target="blank">funcoder</a></h6>
+        </div>
+    {{/if}}
+</template>

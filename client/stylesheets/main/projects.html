@@ -1,0 +1,30 @@
+<template name="projects">
+    <div id="wrapper">
+        <div id="columns">
+            {{#each projects}}
+                <div class="pin">
+                    <span class="glyphicon glyphicon-remove removeProject pull-right" id="{{_id}}"></span>
+                    <a href="{{pathFor 'microsteps' _id= this._id}}">
+                        <div class="title">{{projectName}} </div>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="panel panel-success">
+            <div class="panel-heading">Add Project</div>
+            <div class="panel-body">
+                <form name="addProjectForm">
+                    <div class="form-group">
+                        <label for="projectName" class="control-label">Project Name</label>
+                        <input type="text" name="projectName" class="form-control" />
+                    </div>
+                    
+                    <input type="submit" value="Add Project" class="btn btn-primary" />
+                </form>
+            </div>
+        </div>
+    </div>
+</template>
