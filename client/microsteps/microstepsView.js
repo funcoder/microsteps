@@ -22,6 +22,10 @@ Template.microstepsView.events({
             {
                 console.log("Error [addMicrostep]: " + error);
             }
+            else
+            {
+               $(e.target).find('[name=title]').val(''); 
+            }
         });
     },
     'click .remove': function(e) {
