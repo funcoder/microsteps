@@ -1,0 +1,21 @@
+<template name="microsteps">
+    <div class="container well">
+        {{#if Template.subscriptionsReady}}
+            <h2>{{project}}</h2>
+        {{/if}}
+        
+        <div class="row">
+            <div class="col-md-6">
+                {{> microstepsView}}
+            </div>
+            
+            <div class="col-md-6">
+                {{> notesView }}
+            </div>
+            
+        </div>
+        
+
+    </div>
+</template>
+

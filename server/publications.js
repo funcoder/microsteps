@@ -9,3 +9,7 @@ Meteor.publish('projectDetails', function(id) {
 Meteor.publish('projectMicrosteps', function(id) {
     return Microsteps.find({projectId: id});
 });
+
+Meteor.publish('projectNotes', function(id) {
+    return Notes.find({projectId: id});
+});

@@ -1,0 +1,42 @@
+<template name="notesView">
+    <div class="panel panel-success">
+        <div class="panel-heading">Add Note</div>
+        <div class="panel-body">
+            <form name="addNote">
+
+                <div class="form-group">
+                    <label for="title" class="control-label">Title</label>
+                    <input type="text" name="title" class="form-control" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="description" class="control-label">Description</label>
+                    <textarea name="description" class="form-control" rows="5"></textarea>
+                </div>
+                
+                <input type="submit" value="Add Note" class="btn btn-success" />
+                
+            </form>
+        </div>
+    </div>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Note</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each notes}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>
+                        <button type="button" name="viewNote" class="btn btn-primary view" id="{{_id}}">View/Edit</button>
+                        <button type="button" name="removeNote" class="btn btn-danger remove" id="{{_id}}">Remove</button>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>       
+</template>
