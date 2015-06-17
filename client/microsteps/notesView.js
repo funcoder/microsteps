@@ -25,7 +25,7 @@ Template.notesView.events({
             }
             else {
                 $(e.target).find('[name=title').val('');
-                $(e.target).find('[name=description]').val();
+                $(e.target).find('[name=description]').val('');
             }
         });
     },
