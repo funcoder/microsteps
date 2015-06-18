@@ -1,15 +1,15 @@
 <template name="microsteps">
-    <div class="container well">
+    <div class="container">
         {{#if Template.subscriptionsReady}}
             <h2>{{project}}</h2>
         {{/if}}
         
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 well">
                 {{> microstepsView}}
             </div>
-            
-            <div class="col-md-6">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 well">
                 {{> notesView }}
             </div>
             

@@ -18,6 +18,10 @@ Template.viewNote.events({
             {
                 console.log("Error [updateNote]: " + error);
             }
+            else
+            {
+                Modal.hide("viewNote");
+            }
         });
         
         

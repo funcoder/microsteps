@@ -22,15 +22,22 @@ Template.microstepsView.events({
             {
                 console.log("Error [addMicrostep]: " + error);
             }
+            else
+            {
+               $(e.target).find('[name=title]').val(''); 
+            }
         });
     },
     'click .remove': function(e) {
         e.preventDefault();
-        var id = $(e.target).attr("id");
-        Meteor.call('removeMicrostep', id, function(error, result) {
-            if (error)
-                console.log("Error [removeMicrostep]: " + error);
-        });
+        if (confirm("Delete microstep?"))
+        {
+            var id = $(e.target).attr("id");
+            Meteor.call('removeMicrostep', id, function(error, result) {
+                if (error)
+                    console.log("Error [removeMicrostep]: " + error);
+            });
+        }
     }
 });
 

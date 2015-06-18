@@ -25,17 +25,21 @@ Template.notesView.events({
             }
             else {
                 $(e.target).find('[name=title').val('');
-                $(e.target).find('[name=description]').val();
+                $(e.target).find('[name=description]').val('');
             }
         });
     },
     'click .remove': function(e) {
         e.preventDefault();
-        var id = $(e.target).attr("id");
-        Meteor.call('removeNote', id, function(error, result) {
-            if (error)
-                console.log("Error [removeNote]: " + error);
-        });
+
+        if(confirm('Delete note?'))
+        {
+            var id = $(e.target).attr("id");
+            Meteor.call('removeNote', id, function(error, result) {
+                if (error)
+                    console.log("Error [removeNote]: " + error);
+            });
+        }
     },
     'click .view': function(e) {
         e.preventDefault();
