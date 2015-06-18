@@ -26,6 +26,18 @@
                     <td>{{title}}</td>
                     <td>
                         <button type="button" name="removeMicrostep" class="btn btn-danger remove" id="{{_id}}">Remove</button>
+                        
+                        {{#if isOnHold}}
+                            <button type="button" name="removeHoldMicrostep" class="btn btn-success releaseHold" id="{{_id}}">
+                                <span class="glyphicon glyphicon-hourglass"></span>
+                                Waiting
+                            </button>
+                        {{else}}
+                            <button type="button" name="holdMicrostep" class="btn btn-primary hold" id="{{_id}}">
+                                <span class="glyphicon glyphicon-pause"></span>
+                                Hold
+                            </button>
+                        {{/if}}
                     </td>
                 </tr>
             {{/each}}

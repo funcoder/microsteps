@@ -38,6 +38,24 @@ Template.microstepsView.events({
                     console.log("Error [removeMicrostep]: " + error);
             });
         }
+    },
+    'click .hold': function(e) {
+        e.preventDefault();
+        
+        var id = $(e.target).attr("id");
+        Meteor.call('holdMicrostep', id, function(error, result) {
+           if (error)
+            console.log("Error [holdMicrostep]:" + error);
+        });
+    },
+    'click .releaseHold': function(e) {
+        e.preventDefault();
+        
+        var id = $(e.target).attr("id");
+        Meteor.call('removeHoldMicrostep', id, function(error, result) {
+            if (error)
+                console.log("Error [removeHoldMicrostep]:" + error);
+        });
     }
 });
 
