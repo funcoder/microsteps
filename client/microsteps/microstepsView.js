@@ -1,18 +1,14 @@
-Template.microsteps.onCreated(function() {
-    this.subscribe('projectDetails', Router.current().params._id); 
+Template.microstepsView.onCreated(function() {
     this.subscribe('projectMicrosteps', Router.current().params._id);
 });
 
-Template.microsteps.helpers({
-    project: function() {
-        return Projects.findOne().projectName;
-    },
+Template.microstepsView.helpers({
     microsteps: function() {
         return Microsteps.find();
     }
 });
 
-Template.microsteps.events({
+Template.microstepsView.events({
     'submit form': function(e) {
         e.preventDefault();
         var ms = {

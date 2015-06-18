@@ -1,0 +1,37 @@
+<template name="projects">
+    <div class="row">
+        <div class="container">
+            <div class="col-md-3 col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Projects</div>
+                    <div class="list-group">
+                        {{#each projects}}
+                            <a href="{{pathFor 'microsteps' this.id}}" class="list-group-item">
+                                <h4>{{projectName}}</h4>
+                            </a>
+                        {{/each}}
+                    </div>
+                </div>            
+            </div>
+        
+            <div class="col-md-9 col-sm-8">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Add Project</div>
+                    <div class="panel-body">
+                        <form name="addProjectForm">
+                            <div class="form-group">
+                                <label for="projectName" class="control-label">Project Name</label>
+                                <input type="text" name="projectName" class="form-control" />
+                            </div>
+                            
+                            <input type="submit" value="Add Project" class="btn btn-primary" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</template>
