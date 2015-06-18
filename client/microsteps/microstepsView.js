@@ -39,10 +39,11 @@ Template.microstepsView.events({
             });
         }
     },
-    'click .hold': function(e) {
+    'click .makehold': function(e) {
         e.preventDefault();
         
         var id = $(e.target).attr("id");
+        console.log("ID=" +id);
         Meteor.call('holdMicrostep', id, function(error, result) {
            if (error)
             console.log("Error [holdMicrostep]:" + error);

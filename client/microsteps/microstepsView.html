@@ -29,13 +29,11 @@
                         
                         {{#if isOnHold}}
                             <button type="button" name="removeHoldMicrostep" class="btn btn-success releaseHold" id="{{_id}}">
-                                <span class="glyphicon glyphicon-hourglass"></span>
-                                Waiting
+                                <span class="glyphicon glyphicon-hourglass" id="{{_id}}"></span>
                             </button>
                         {{else}}
-                            <button type="button" name="holdMicrostep" class="btn btn-primary hold" id="{{_id}}">
-                                <span class="glyphicon glyphicon-pause"></span>
-                                Hold
+                            <button type="button" name="holdMicrostep" class="btn btn-primary makehold" id="{{_id}}">
+                                <span class="glyphicon glyphicon-pause" id="{{_id}}"></span>
                             </button>
                         {{/if}}
                     </td>
