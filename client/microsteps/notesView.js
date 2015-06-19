@@ -2,6 +2,12 @@ Template.notesView.onCreated(function() {
     this.subscribe('projectNotes', Router.current().params._id);
 });
 
+Template.notesView.onRendered(function() {
+    // Hide the add notes
+    $('#addNoteForm').css('display', 'none');
+    $('#hideAddNotes').html('Show');    
+});
+
 Template.notesView.helpers({
     notes: function() {
         return Notes.find();

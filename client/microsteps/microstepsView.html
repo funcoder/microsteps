@@ -20,15 +20,15 @@
         <thead>
             <tr>
                 <th>Microsostep</th>
-                <th>Options</th>
+                <th class="text-right">Options</th>
             </tr>
         </thead>
         <tbody>
             {{#each microsteps}}
                 <tr>
                     <td>{{title}}</td>
-                    <td>
-                        <button type="button" name="removeMicrostep" class="btn btn-danger remove" id="{{_id}}">Remove</button>
+                    <td class="text-right">
+                        <button type="button" name="removeMicrostep" class="btn btn-danger remove"><span class="glyphicon glyphicon-remove" id="{{_id}}"></span></button>
                         
                         {{#if isOnHold}}
                             <button type="button" name="removeHoldMicrostep" class="btn btn-success releaseHold" id="{{_id}}">

@@ -2,6 +2,11 @@ Template.microstepsView.onCreated(function() {
     this.subscribe('projectMicrosteps', Router.current().params._id);
 });
 
+Template.microstepsView.onRendered(function() {
+    $('#addMicrostepForm').css('display', 'none');
+    $('#hideAddMicrostep').html('Show'); 
+});
+
 Template.microstepsView.helpers({
     microsteps: function() {
         return Microsteps.find();

@@ -7,9 +7,8 @@
 meteor-platform
 jquery
 twbs:bootstrap
-ian:accounts-ui-bootstrap-3
 iron:router
-accounts-base
 accounts-password
 meteorhacks:kadira-debug
 peppelg:bootstrap-3-modal
+useraccounts:bootstrap
