@@ -43,7 +43,6 @@ Template.microstepsView.events({
         e.preventDefault();
         
         var id = $(e.target).attr("id");
-        console.log("ID=" +id);
         Meteor.call('holdMicrostep', id, function(error, result) {
            if (error)
             console.log("Error [holdMicrostep]:" + error);
@@ -57,6 +56,20 @@ Template.microstepsView.events({
             if (error)
                 console.log("Error [removeHoldMicrostep]:" + error);
         });
+    },
+    'click #hideAddMicrostep': function(e) {
+        e.preventDefault();
+
+        if ($(e.target).html() == "Hide")
+        {
+            $('#addMicrostepForm').css('display', 'none');
+            $(e.target).html('Show');
+        }
+        else
+        {
+            $('#addMicrostepForm').css('display', '');
+            $(e.target).html('Hide');
+        }
     }
 });
 

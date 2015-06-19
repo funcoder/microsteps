@@ -1,7 +1,10 @@
 <template name="microstepsView">
     <div class="panel panel-success">
-        <div class="panel-heading">Add Microstep</div>
-        <div class="panel-body">
+        <div class="panel-heading">
+            Add Microstep
+            <button name="hideAddMicrostep" id="hideAddMicrostep" class="btn btn-xs btn-success pull-right">Hide</button>
+        </div>
+        <div class="panel-body" id="addMicrostepForm">
             <form name="addMicrostep">
                 <div class="form-group">
                     <label for="title" class="control-label">Title</label>

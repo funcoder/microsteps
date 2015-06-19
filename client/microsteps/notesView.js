@@ -48,5 +48,19 @@ Template.notesView.events({
         console.log("ID: " + id +  ", Note: " + note.title);
         
         Modal.show("viewNote", {note: note});
-    }
+    },
+    'click #hideAddNotes': function(e) {
+        e.preventDefault();
+
+        if ($(e.target).html() == "Hide")
+        {
+            $('#addNoteForm').css('display', 'none');
+            $(e.target).html('Show');
+        }
+        else
+        {
+            $('#addNoteForm').css('display', '');
+            $(e.target).html('Hide');
+        }
+    }    
 });

@@ -1,7 +1,10 @@
 <template name="notesView">
-    <div class="panel panel-success">
-        <div class="panel-heading">Add Note</div>
-        <div class="panel-body">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Add Note
+            <button type="button" class="btn btn-primary btn-xs pull-right" name="hideAddNotes" id="hideAddNotes">Hide</button>
+        </div>
+        <div class="panel-body" id="addNoteForm">
             <form name="addNote">
 
                 <div class="form-group">
@@ -14,7 +17,7 @@
                     <textarea name="description" class="form-control" rows="5"></textarea>
                 </div>
                 
-                <input type="submit" value="Add Note" class="btn btn-success" />
+                <input type="submit" value="Add Note" class="btn btn-primary" />
                 
             </form>
         </div>
