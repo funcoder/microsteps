@@ -23,23 +23,18 @@
         </div>
     </div>
     
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Note</th>
-                <th class="text-right">Options</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each notes}}
-                <tr>
-                    <td>{{title}}</td>
-                    <td class="text-right">
-                        <button type="button" name="viewNote" class="btn btn-primary view" id="{{_id}}">View/Edit</button>
-                        <button type="button" name="removeNote" class="btn btn-danger remove"><span class="glyphicon glyphicon-remove" id="{{_id}}"></span></button>
-                    </td>
-                </tr>
-            {{/each}}
-        </tbody>
-    </table>       
+    <div class="list-group">
+        {{#each notes}}
+            <a class="list-group-item clearfix">
+                <span class="glyphicon glyphicon-option-vertical"></span>
+                {{title}}
+                <span class="pull-right">
+                    <button type="button" name="viewNote" class="btn btn-primary btn-xs view" id="{{_id}}">View/Edit</button>
+                    <button type="button" name="removeNote" class="btn btn-danger btn-xs remove"><span class="glyphicon glyphicon-remove" id="{{_id}}"></span></button>
+                </span>
+            </a>
+        {{/each}}
+    </div>
+    
+      
 </template>
