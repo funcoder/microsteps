@@ -1,8 +1,8 @@
 <template name="microstepsView">
     <div class="panel panel-success">
         <div class="panel-heading">
-            Add Microstep
-            <button name="hideAddMicrostep" id="hideAddMicrostep" class="btn btn-xs btn-success pull-right">Hide</button>
+          Add Microstep
+          <button name="hideAddMicrostep" id="hideAddMicrostep" class="btn btn-xs btn-success pull-right hideAddMicrostep">Hide</button>
         </div>
         <div class="panel-body" id="addMicrostepForm">
             <form name="addMicrostep">
@@ -10,12 +10,12 @@
                     <label for="title" class="control-label">Title</label>
                     <input type="text" name="title" class="form-control" />
                 </div>
-                
+
                 <input type="submit" value="Add Microstep" class="btn btn-success" />
             </form>
         </div>
     </div>
-    
+
     <div class="list-group">
         {{#each microsteps}}
             <a class="list-group-item clearfix">
@@ -30,7 +30,7 @@
                         <button type="button" name="holdMicrostep" class="btn btn-primary makehold btn-xs" id="{{_id}}">
                             <span class="glyphicon glyphicon-pause" id="{{_id}}"></span>
                         </button>
-                    {{/if}}                
+                    {{/if}}
                 </span>
             </a>
         {{/each}}

@@ -30,8 +30,8 @@ Template.notesView.events({
                 console.log("Error [addNote]: " + error);
             }
             else {
-                $(e.target).find('[name=title').val('');
-                $(e.target).find('[name=description]').val('');
+                $(e.target).find('[name=title]').val('').focus();
+                $(e.target).find('[name=description]').val('');               
             }
         });
     },

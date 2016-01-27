@@ -4,7 +4,7 @@ Template.microstepsView.onCreated(function() {
 
 Template.microstepsView.onRendered(function() {
     $('#addMicrostepForm').css('display', 'none');
-    $('#hideAddMicrostep').html('Show'); 
+    $('#hideAddMicrostep').html('Show');
 });
 
 Template.microstepsView.helpers({
@@ -21,7 +21,7 @@ Template.microstepsView.events({
             title: $(e.target).find('[name=title]').val(),
             userId: Meteor.userId()
         };
-        
+
         Meteor.call('addMicrostep', ms, function(error, result) {
             if (error)
             {
@@ -29,7 +29,7 @@ Template.microstepsView.events({
             }
             else
             {
-               $(e.target).find('[name=title]').val(''); 
+               $(e.target).find('[name=title]').val('').focus();
             }
         });
     },
@@ -46,7 +46,7 @@ Template.microstepsView.events({
     },
     'click .makehold': function(e) {
         e.preventDefault();
-        
+
         var id = $(e.target).attr("id");
         Meteor.call('holdMicrostep', id, function(error, result) {
            if (error)
@@ -55,7 +55,7 @@ Template.microstepsView.events({
     },
     'click .releaseHold': function(e) {
         e.preventDefault();
-        
+
         var id = $(e.target).attr("id");
         Meteor.call('removeHoldMicrostep', id, function(error, result) {
             if (error)
@@ -77,4 +77,3 @@ Template.microstepsView.events({
         }
     }
 });
-

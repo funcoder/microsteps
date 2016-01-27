@@ -4,7 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
 jquery
 twbs:bootstrap
 iron:router
@@ -13,3 +12,17 @@ meteorhacks:kadira-debug
 peppelg:bootstrap-3-modal
 useraccounts:bootstrap
 rubaxa:sortable
+useraccounts:iron-routing
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
