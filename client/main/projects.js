@@ -22,7 +22,8 @@ Template.projects.events({
             if (error)
                 return alert(error)
             else
-                $(e.target).find('[name=projectName]').val('');    
+                $(e.target).find('[name=projectName]').val('').focus(); 
+                
         
         })
     },
